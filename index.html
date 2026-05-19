@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Igor Canzi | Psicólogo Clínico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Dr. Igor Canzi</a>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#services">Especialidades</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="nav-mobile">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#services">Especialidades</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Cuidar da mente é transformar vidas.</h1>
+                <p class="hero-intro">Olá, sou o Dr. Igor Canzi. Minha missão é proporcionar um espaço seguro e acolhedor para que você possa explorar suas emoções e encontrar o equilíbrio necessário para uma vida plena.</p>
+                <p class="crp">CRP 05/57575</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-primary">Agendar pelo WhatsApp</a>
+                    <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" class="btn btn-secondary">Seguir no Instagram</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="image-wrapper">
+                    <img src="../img/psi.igor.jpeg" alt="Dr. Igor Canzi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-header fade-in">
+                <h2>Sobre Mim</h2>
+                <p>Com anos de experiência em psicologia clínica, foco meu trabalho na empatia e no suporte emocional, auxiliando meus pacientes na busca pelo autoconhecimento e bem-estar mental.</p>
+            </div>
+            <div id="services" class="services-grid">
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Suporte Emocional</h3>
+                    <p>Acolhimento especializado para lidar com momentos de crise, ansiedade e desafios emocionais do cotidiano.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Autoconhecimento</h3>
+                    <p>Um processo profundo de descoberta pessoal, permitindo que você compreenda seus padrões e potencialize suas forças.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Bem-estar Mental</h3>
+                    <p>Foco na saúde mental preventiva e no desenvolvimento de ferramentas para uma vida mais equilibrada e saudável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2>Dê o primeiro passo hoje</h2>
+            <p>Preencha os dados abaixo para iniciarmos seu atendimento de forma personalizada via WhatsApp.</p>
+            
+            <div class="contact-form-wrapper">
+                <form id="whatsapp-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname">Nome</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Sobrenome</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Seu sobrenome" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="Psicoterapia Individual">Psicoterapia Individual</option>
+                            <option value="Terapia de Casal">Terapia de Casal</option>
+                            <option value="Orientação Profissional">Orientação Profissional</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-whatsapp-submit">
+                        <i class="fab fa-whatsapp"></i> Iniciar Conversa no WhatsApp
+                    </button>
+                </form>
+                <p class="phone-number-display">Ou se preferir: <strong>+55 (21) 97234-3812</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="quote">"Onde quer que haja um ser humano, há uma oportunidade para a bondade e a cura."</p>
+            <div class="footer-info">
+                <p><strong>Dr. Igor Canzi</strong></p>
+                <p>Psicólogo Clínico | CRP 05/57575</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dr. Igor Canzi. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" class="float-btn float-instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#contact" class="float-btn float-whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
