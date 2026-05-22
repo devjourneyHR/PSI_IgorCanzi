@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('subject').value;
             
             const phoneNumber = "5521972343812";
-            const message = `Olá Dr. Igor Canzi,\n\nGostaria de agendar um atendimento.\n\n*Dados do Contato:*\n- Nome: ${firstName} ${lastName}\n- E-mail: ${email}\n- Assunto: ${subject}\n\nAguardo seu retorno.`;
+            const message = `Olá Igor Canzi,\n\nGostaria de agendar um atendimento.\n\n*Dados do Contato:*\n- Nome: ${firstName} ${lastName}\n- E-mail: ${email}\n- Assunto: ${subject}\n\nAguardo seu retorno.`;
             
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
