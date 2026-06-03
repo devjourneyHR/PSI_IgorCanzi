@@ -310,38 +310,7 @@ header .container {
     cursor: default;
 }
 
-.card {
-    background-color: var(--bg-color);
-    padding: 3.5rem 2.5rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: var(--transition);
-    border: 1px solid transparent;
-}
 
-.card:hover {
-    transform: translateY(-10px);
-    background-color: var(--white);
-    border-color: var(--secondary-color);
-    box-shadow: var(--shadow-medium);
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
-.card h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
 
 /* Contact Section */
 .contact {
