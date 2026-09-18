@@ -6,11 +6,12 @@
     <meta name="color-scheme" content="light only">
     <meta name="supported-color-schemes" content="light">
     <meta name="darkreader-lock" content="lock">
-    <title>Igor Canzi | Psicólogo Clínico</title>
+    <meta name="description" content="Igor Canzi - Psicólogo Clínico e Psicanalista (CRP 05/57575). Atendimento on-line e presencial em psicanálise, psicoterapia, palestras e supervisão clínica.">
+    <title>Igor Canzi | Psicólogo Clínico e Psicanalista</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,26 +19,26 @@
     <header id="header">
         <div class="container">
             <div class="logo">
-                <a href="#home">Igor Canzi</a>
+                <a href="#home" aria-label="Igor Canzi - Início">Igor Canzi</a>
             </div>
-            <nav class="nav-desktop">
+            <nav class="nav-desktop" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre Mim</a></li>
-                    <li><a href="#services">Especialidades</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mim</a></li>
+                    <li><a href="#services" class="nav-link">Especialidades</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-mobile">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="nav-mobile" id="nav-mobile">
+    <!-- Mobile Menu Drawer -->
+    <div class="nav-mobile" id="nav-mobile" aria-label="Menu móvel" aria-hidden="true">
         <ul>
             <li><a href="#home">Início</a></li>
             <li><a href="#about">Sobre Mim</a></li>
@@ -45,77 +46,236 @@
             <li><a href="#contact">Contato</a></li>
         </ul>
     </div>
+    <div class="nav-mobile-backdrop" id="nav-backdrop"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Igor Canzi - CRP: 05/57575 <br> Psicólogo e Psicanalista <br> Atendimento on-line e presencial. </h1>
-                <p class="hero-intro">Meu compromisso é com um atendimento diferenciado, sustentado por uma escuta atenta, cuidadosa e singular diante de cada paciente. Acredito que cada pessoa traz consigo uma história única, e é nesse encontro que a análise pode acontecer: como um espaço aberto para investigar suas próprias questões, implicações, sentimentos e tudo aquilo que vai emergindo no percurso da vida. Cada sessão, então, se torna mais do que um momento de fala é um convite para tratar da vida, para acolher o que se apresenta, para construir novos sentidos e dar lugar ao que precisa ser elaborado.</p>
-                <div class="hero-ctas">
-                    <a href="#contact" class="btn btn-primary">Agendar pelo WhatsApp</a>
-                    <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" class="btn btn-secondary">Seguir no Instagram</a>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-credential">
+                        <span class="credential-name">Igor Canzi</span>
+                        <span class="credential-sep">·</span>
+                        <span>Psicólogo e Psicanalista</span>
+                        <span class="credential-sep">·</span>
+                        <span class="credential-crp">CRP: 05/57575</span>
+                    </div>
+                    <h1>Igor Canzi - CRP: 05/57575 <br> Psicólogo e Psicanalista <br> <em>Atendimento on-line e presencial</em></h1>
+                    <div class="hero-modalities">
+                        <span class="modality-tag modality-tag--online"><i class="fas fa-laptop" aria-hidden="true"></i> Atendimento On-line</span>
+                        <span class="modality-tag modality-tag--presencial"><i class="fas fa-couch" aria-hidden="true"></i> Atendimento Presencial</span>
+                    </div>
+                    <p class="hero-intro">Meu compromisso é com um atendimento diferenciado, sustentado por uma escuta atenta, cuidadosa e singular diante de cada paciente. Acredito que cada pessoa traz consigo uma história única, e é nesse encontro que a análise pode acontecer: como um espaço aberto para investigar suas próprias questões, implicações, sentimentos e tudo aquilo que vai emergindo no percurso da vida. Cada sessão, então, se torna mais do que um momento de fala é um convite para tratar da vida, para acolher o que se apresenta, para construir novos sentidos e dar lugar ao que precisa ser elaborado.</p>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-primary" aria-label="Agendar atendimento pelo WhatsApp">Agendar pelo WhatsApp</a>
+                        <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Seguir perfil de Igor Canzi no Instagram (abre em nova aba)">Seguir no Instagram</a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://devjourneyhr.github.io/PSI_IgorCanzi/img/psi.igor.jpeg" alt="Fotografia de Igor Canzi, psicólogo clínico e psicanalista">
+                    </div>
                 </div>
             </div>
-            <div class="hero-image fade-in">
-                <div class="image-wrapper">
-                    <img src="https://devjourneyhr.github.io/PSI_IgorCanzi/img/psi.igor.jpeg" alt="Igor Canzi">
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-header fade-in">
+                    <h2>Sobre Mim</h2>
+                    <p>Formado em 2018 pelo Centro Universitário Abeu (Uniabeu), mergulhei nos estudos clínicos e na psicologia social desde os primeiros períodos da graduação. Essa atenção precoce despertou em mim uma paixão pela psicanálise, que me levou a afinar minha escuta e a compreender, de fato, o que cada paciente expressava tanto nas palavras quanto nas entrelinhas. Acredito que cada gesto, cada pausa, cada silêncio carrega um enorme valor. Por isso, procuro estar sempre atento e cuidadoso em cada atendimento, construindo um espaço onde o paciente possa se sentir reunido para ser quem é, sem pressa e sem julgamentos. É nesse encontro delicado entre teoria e que a presença psicanalítica se torna viva e verdadeiramente transformadora</p>
+                </div>
+
+                <div class="about-commitments fade-in">
+                    <div class="commitment-item commitment-item--escuta">
+                        <div class="commitment-header">
+                            <i class="fas fa-ear-listen"></i>
+                            <h3>Escuta Singular</h3>
+                        </div>
+                        <p>Atenção cuidadosa a cada gesto, pausa e silêncio, compreendendo o que se expressa nas palavras e nas entrelinhas.</p>
+                    </div>
+                    <div class="commitment-item commitment-item--acolhimento">
+                        <div class="commitment-header">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h3>Espaço Acolhedor</h3>
+                        </div>
+                        <p>Um ambiente seguro onde o paciente pode se sentir reunido para ser quem é, sem pressa e sem julgamentos.</p>
+                    </div>
+                    <div class="commitment-item commitment-item--sentidos">
+                        <div class="commitment-header">
+                            <i class="fas fa-seedling"></i>
+                            <h3>Construção de Sentidos</h3>
+                        </div>
+                        <p>Investigação aberta das próprias questões e sentimentos, dando lugar ao que precisa ser elaborado na vida.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-header fade-in">
-                <h2>Sobre Mim</h2>
-                <p>Formado em 2018 pelo Centro Universitário Abeu (Uniabeu), mergulhei nos estudos clínicos e na psicologia social desde os primeiros períodos da graduação. Essa atenção precoce despertou em mim uma paixão pela psicanálise, que me levou a afinar minha escuta e a compreender, de fato, o que cada paciente expressava tanto nas palavras quanto nas entrelinhas. Acredito que cada gesto, cada pausa, cada silêncio carrega um enorme valor. Por isso, procure estar sempre atento e cuidadoso em cada atendimento, construindo um espaço onde o paciente possa se sentir reunido para ser quem é, sem pressa e sem julgamentos. É nesse encontro delicado entre teoria e que a presença psicanalítica se torna viva e verdadeiramente transformadora</p>
-            </div>
-            
-        </div>
-    </section>
+        <!-- Services Section (Especialidades) -->
+        <section id="services" class="services">
+            <div class="container fade-in">
+                <div class="services-header">
+                    <h2>Especialidades</h2>
+                    <p class="services-intro">Atendimentos clínicos, palestras e supervisões fundamentadas na psicanálise e no respeito à singularidade de cada pessoa.</p>
+                </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container fade-in">
-            <h2>Dê o primeiro passo hoje</h2>
-            <p>Preencha os dados abaixo para iniciarmos seu atendimento de forma personalizada via WhatsApp.</p>
-            
-            <div class="contact-form-wrapper">
-                <form id="whatsapp-form" class="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstname">Nome</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="Seu nome" required>
+                <div class="services-grid">
+                    <article class="service-card service-card--clinica">
+                        <div class="service-card-header">
+                            <span class="service-domain">Clínica Individual</span>
+                            <h3>Atendimento Clínico</h3>
                         </div>
-                        <div class="form-group">
-                            <label for="lastname">Sobrenome</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="Seu sobrenome" required>
+                        <p>Espaço para investigar questões subjetivas, angústias e sentimentos, acolhendo a história única de cada paciente na construção de novos sentidos.</p>
+                        <ul class="service-points">
+                            <li>Atendimento on-line e presencial</li>
+                            <li>Escuta atenta, cuidadosa e singular</li>
+                            <li>Acolhimento sem pressa e sem julgamentos</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card service-card--supervisao">
+                        <div class="service-card-header">
+                            <span class="service-domain">Formação & Prática</span>
+                            <h3>Supervisão em Psicanálise</h3>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Assunto de interesse</label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Selecione um assunto</option>
-                            <option value="Atendimento clínico">Atendimento clínico</option>
-                            <option value="palestra">Palestra</option>
-                            <option value="Supervisão em psicanálise">Supervisão em psicanálise</option>
-                            <option value="Outros">Outros</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-whatsapp-submit">
-                        <i class="fab fa-whatsapp"></i> Iniciar Conversa no WhatsApp
-                    </button>
-                </form>
-                <p class="phone-number-display">Ou se preferir: <strong>+55 (21) 97234-3812</strong></p>
+                        <p>Espaço de discussão clínica e aprofundamento teórico para estudantes e psicólogos que buscam afinar a escuta e a condução dos atendimentos.</p>
+                        <ul class="service-points">
+                            <li>Discussão ética e cuidadosa de casos</li>
+                            <li>Encontro entre teoria psicanalítica e prática</li>
+                            <li>Desenvolvimento da escuta clínica</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card service-card--palestras">
+                        <div class="service-card-header">
+                            <span class="service-domain">Transmissão & Diálogo</span>
+                            <h3>Palestras</h3>
+                        </div>
+                        <p>Encontros temáticos e palestras sobre saúde mental, psicanálise e psicologia social para instituições, empresas e espaços acadêmicos.</p>
+                        <ul class="service-points">
+                            <li>Temas contemporâneos em saúde mental</li>
+                            <li>Diálogo aberto e reflexão coletiva</li>
+                            <li>Formatos presenciais ou remotos</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card service-card--modalidades">
+                        <div class="service-card-header">
+                            <span class="service-domain">Modalidades de Acesso</span>
+                            <h3>Atendimento On-line e Presencial</h3>
+                        </div>
+                        <p>Atendimento adaptado à rotina do paciente com o mesmo rigor ético e acolhimento, permitindo acesso de qualquer localidade.</p>
+                        <ul class="service-points">
+                            <li>Plataforma segura com sigilo profissional</li>
+                            <li>Consultório acolhedor para sessões presenciais</li>
+                            <li>Flexibilidade geográfica com comodidade</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="services-cta">
+                    <p>Deseja agendar um atendimento ou tirar dúvidas sobre as modalidades?</p>
+                    <a href="#contact" class="btn btn-primary" aria-label="Iniciar conversa no WhatsApp para agendamento ou dúvidas">Iniciar Conversa no WhatsApp</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container fade-in">
+                <h2>Dê o primeiro passo hoje</h2>
+                <p class="contact-subtitle">Preencha os dados abaixo para iniciarmos seu atendimento de forma personalizada via WhatsApp.</p>
+                
+                <div class="contact-layout">
+                    <!-- Left: Form Card -->
+                    <div class="contact-form-wrapper" id="contact-card">
+                        <form id="whatsapp-form" class="contact-form" aria-label="Formulário para agendamento de atendimento via WhatsApp">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstname">Nome</label>
+                                    <input type="text" id="firstname" name="firstname" placeholder="Seu nome" required autocomplete="given-name" aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Sobrenome</label>
+                                    <input type="text" id="lastname" name="lastname" placeholder="Seu sobrenome" required autocomplete="family-name" aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto de interesse</label>
+                                <select id="subject" name="subject" required aria-required="true">
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="Atendimento clínico">Atendimento clínico</option>
+                                    <option value="palestra">Palestra</option>
+                                    <option value="Supervisão em psicanálise">Supervisão em psicanálise</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-whatsapp-submit" id="btn-submit" aria-label="Iniciar conversa com Igor Canzi no WhatsApp com os dados preenchidos">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> <span id="submit-text">Iniciar Conversa no WhatsApp</span>
+                            </button>
+                        </form>
+                        
+                        <div class="direct-contact-divider" aria-hidden="true">
+                            <span>ou contato direto</span>
+                        </div>
+                        
+                        <div class="direct-whatsapp-box">
+                            <a href="https://wa.me/5521972343812" target="_blank" rel="noopener noreferrer" class="direct-wa-link" aria-label="Conversar diretamente pelo WhatsApp no número +55 (21) 97234-3812 (abre em nova aba)">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> +55 (21) 97234-3812
+                            </a>
+                            <p class="direct-contact-hint">Clique para abrir diretamente no WhatsApp</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Cinematic Live Chat Preview (Overdrive) -->
+                    <aside class="wa-preview-wrapper" id="wa-preview-wrapper" aria-label="Simulação em tempo real da mensagem a ser enviada pelo WhatsApp">
+                        <div class="wa-preview-badge">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Pré-visualização em tempo real
+                        </div>
+                        <div class="wa-phone-frame" id="wa-phone-frame">
+                            <div class="wa-chat-header">
+                                <div class="wa-chat-avatar">
+                                    <img src="https://devjourneyhr.github.io/PSI_IgorCanzi/img/psi.igor.jpeg" alt="Foto de perfil de Igor Canzi">
+                                </div>
+                                <div class="wa-chat-user-info">
+                                    <span class="wa-chat-name">Igor Canzi</span>
+                                    <span class="wa-chat-status"><span class="status-dot"></span> Online · CRP 05/57575</span>
+                                </div>
+                            </div>
+                            <div class="wa-chat-body">
+                                <div class="wa-date-pill">Hoje</div>
+                                
+                                <div class="wa-bubble wa-bubble--outgoing" id="wa-bubble" aria-live="polite">
+                                    <p class="wa-bubble-greeting">Olá Igor Canzi,</p>
+                                    <p class="wa-bubble-intent">Gostaria de agendar um atendimento.</p>
+                                    <div class="wa-bubble-data">
+                                        <p class="wa-data-title"><strong>*Dados do Contato:*</strong></p>
+                                        <p>- Nome: <span id="preview-name" class="preview-var">Seu Nome</span></p>
+                                        <p>- E-mail: <span id="preview-email" class="preview-var">seu@email.com</span></p>
+                                        <p>- Assunto de interesse: <span id="preview-subject" class="preview-var">Selecione um assunto</span></p>
+                                    </div>
+                                    <p class="wa-bubble-closing">Aguardo seu retorno.</p>
+                                    <div class="wa-bubble-meta">
+                                        <span class="wa-bubble-time" id="preview-time">12:00</span>
+                                        <span class="wa-bubble-checks" aria-hidden="true"><i class="fas fa-check-double"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wa-chat-footer-hint">
+                                <i class="fas fa-lock" aria-hidden="true"></i> Mensagem enviada diretamente para o WhatsApp oficial
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -125,6 +285,11 @@
                 <p><strong>Igor Canzi</strong></p>
                 <p>Psicólogo Clínico | CRP 05/57575</p>
             </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Igor Canzi no Instagram @psi.igorcanzi (abre em nova aba)">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> @psi.igorcanzi
+                </a>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Andrew Harris. Todos os direitos reservados.</p>
             </div>
@@ -132,12 +297,12 @@
     </footer>
 
     <!-- Floating Buttons -->
-    <div class="floating-buttons">
-        <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" class="float-btn float-instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
+    <div class="floating-buttons" role="region" aria-label="Atalhos rápidos de contato">
+        <a href="https://instagram.com/psi.igorcanzi?igsh=MWpreDRzcGt5MHI2Mg==" target="_blank" rel="noopener noreferrer" class="float-btn float-instagram" aria-label="Acessar perfil de Igor Canzi no Instagram (abre em nova aba)">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="#contact" class="float-btn float-whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <a href="#contact" class="float-btn float-whatsapp" aria-label="Ir para formulário de atendimento no WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
     </div>
 
