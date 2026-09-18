@@ -366,47 +366,67 @@ header .container {
     align-items: center;
 }
 
-.hero-content h1 {
-    font-size: clamp(2.6rem, 4.8vw, 3.9rem);
-    line-height: 1.14;
+/* Hero Typography Hierarchy */
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.35rem;
+}
+
+.hero-title-name {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 5.2vw, 4.2rem);
+    line-height: 1.05;
     color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
     font-weight: 600;
 }
 
-.hero-content h1 em {
+.hero-title-role {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.95rem);
     font-style: italic;
+    font-weight: 400;
+    line-height: 1.25;
     color: var(--secondary-color);
-    font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
-.hero-credential {
+/* Hero Badges & Modalities */
+.hero-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.2rem;
+}
+
+.badge-crp {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 0.92rem;
-    color: var(--text-color);
+    gap: 0.55rem;
     background-color: var(--surface-card);
     border: 1px solid var(--border-medium);
-    padding: 0.45rem 1.1rem;
-    border-radius: 30px;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.credential-name {
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.credential-sep {
-    color: var(--secondary-color);
-}
-
-.credential-crp {
+    padding: 0.5rem 1.05rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
     font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(36, 53, 43, 0.04);
+    transition: var(--transition);
+}
+
+.badge-crp i {
     color: var(--secondary-color);
+    font-size: 0.85rem;
+}
+
+.badge-crp:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
 }
 
 .hero-intro {
@@ -415,13 +435,6 @@ header .container {
     line-height: 1.75;
     margin-bottom: 2rem;
     max-width: 620px;
-}
-
-.hero-modalities {
-    display: flex;
-    gap: 0.85rem;
-    flex-wrap: wrap;
-    margin-bottom: 2.4rem;
 }
 
 .modality-tag {
@@ -1338,10 +1351,24 @@ footer {
         margin-right: auto;
     }
     
-    .hero-modalities {
-        justify-content: center;
+    .hero-title {
+        align-items: center;
     }
-    
+
+    .hero-title-name {
+        font-size: clamp(2.3rem, 6.5vw, 3rem);
+    }
+
+    .hero-title-role {
+        font-size: 1.35rem;
+    }
+
+    .hero-badges {
+        justify-content: center;
+        gap: 0.65rem;
+        margin-bottom: 1.8rem;
+    }
+
     .hero-ctas {
         justify-content: center;
     }
@@ -1363,11 +1390,6 @@ footer {
     .form-row {
         grid-template-columns: 1fr;
     }
-    
-    .hero-content h1 {
-        font-size: 2.2rem;
-        line-height: 1.22;
-    }
 
     .contact-form-wrapper {
         padding: 2rem 1.5rem;
@@ -1379,9 +1401,18 @@ footer {
         padding: 0 1.25rem;
     }
 
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.25;
+    .hero-title-name {
+        font-size: 2.15rem;
+    }
+
+    .hero-title-role {
+        font-size: 1.22rem;
+    }
+
+    .badge-crp,
+    .modality-tag {
+        font-size: 0.84rem;
+        padding: 0.45rem 0.9rem;
     }
     
     .floating-buttons {
