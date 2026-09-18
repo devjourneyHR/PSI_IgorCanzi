@@ -1199,6 +1199,26 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 0.82rem;
     color: #8C948E;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    align-items: center;
+}
+
+.footer-credit {
+    font-size: 0.76rem;
+    color: #9AA49C;
+}
+
+.dev-link {
+    color: #A6B0A8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dev-link:hover {
+    color: var(--secondary-light);
+    text-decoration: underline;
 }
 
 /* ==========================================================================
